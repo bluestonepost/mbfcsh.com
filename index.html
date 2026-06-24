@@ -115,13 +115,6 @@
       color: white;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
     .grid-wide {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -143,22 +136,62 @@
       margin-bottom: 6px;
     }
 
-    .value-card {
+    .paired-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .pair-card {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: stretch;
+      background: #f8f5ef;
+      border-radius: 10px;
+      padding: 14px;
+      border: 1px solid #e1ded6;
+    }
+
+    .value-side,
+    .friction-side {
+      padding: 14px;
+      border-radius: 8px;
+      min-height: 110px;
+    }
+
+    .value-side {
       background: #f4fbf5;
       border-left: 5px solid #087333;
     }
 
-    .value-card strong {
-      color: #087333;
-    }
-
-    .friction-card {
+    .friction-side {
       background: #fff7f7;
       border-left: 5px solid #9b1c1c;
     }
 
-    .friction-card strong {
+    .value-side strong {
+      color: #087333;
+      display: block;
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+
+    .friction-side strong {
       color: #9b1c1c;
+      display: block;
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+
+    .versus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #033c22;
+      font-weight: bold;
+      font-size: 20px;
     }
 
     .split {
@@ -283,6 +316,15 @@
       .section {
         padding: 26px;
       }
+
+      .pair-card {
+        grid-template-columns: 1fr;
+      }
+
+      .versus {
+        transform: rotate(90deg);
+        padding: 4px 0;
+      }
     }
   </style>
 
@@ -360,31 +402,86 @@
 </section>
 
 <section class="section">
-  <h2>The Six Desired Outcomes</h2>
-  <div class="grid">
-    <div class="card value-card"><strong>📈 More</strong>Increase useful output, capacity, productivity, or customer value.</div>
-    <div class="card value-card"><strong>🏅 Better</strong>Improve quality, consistency, reliability, and outcomes.</div>
-    <div class="card value-card"><strong>⏱️ Faster</strong>Reduce waiting, delays, bottlenecks, and unnecessary steps.</div>
-    <div class="card value-card"><strong>💲 Cheaper</strong>Lower total cost, including hidden cost and avoidable complexity.</div>
-    <div class="card value-card"><strong>🛡️ Safer</strong>Reduce risk, instability, exposure, and unintended consequences.</div>
-    <div class="card value-card"><strong>😊 Happier</strong>Improve the experience of employees, customers, suppliers, and stakeholders.</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>The Six Forms of Organizational Friction</h2>
+  <h2>The MBFC+SH Framework</h2>
   <p>
-    Most organizational problems can be traced to one or more recurring forms of friction.
-    MBFC+SH helps make those frictions visible so they can be reduced.
+    MBFC+SH connects each desired outcome to the friction that most commonly prevents it.
+    The framework helps teams see both sides of a decision before acting.
   </p>
 
-  <div class="grid-wide">
-    <div class="card friction-card"><strong>🗑️ Waste</strong>Unnecessary consumption of time, materials, labor, money, space, or other resources.</div>
-    <div class="card friction-card"><strong>❌ Defects</strong>Errors, quality issues, rework, scrap, missed requirements, and customer dissatisfaction.</div>
-    <div class="card friction-card"><strong>⏳ Delays</strong>Waiting, bottlenecks, approvals, extended lead times, missed deadlines, and lost opportunities.</div>
-    <div class="card friction-card"><strong>💸 Excess Cost</strong>Expense created by inefficiency, complexity, poor decisions, or avoidable activities.</div>
-    <div class="card friction-card"><strong>⚠️ Risk</strong>Exposure to injury, accidents, compliance issues, operational disruption, or poor outcomes.</div>
-    <div class="card friction-card"><strong>😟 Frustration</strong>Reduced morale, customer dissatisfaction, confusion, unnecessary stress, and stakeholder irritation.</div>
+  <div class="paired-grid">
+
+    <div class="pair-card">
+      <div class="value-side">
+        <strong>📈 More</strong>
+        Increase useful output, capacity, productivity, or customer value.
+      </div>
+      <div class="versus">↔</div>
+      <div class="friction-side">
+        <strong>🗑️ Waste</strong>
+        Unnecessary consumption of time, materials, labor, money, space, or resources.
+      </div>
+    </div>
+
+    <div class="pair-card">
+      <div class="value-side">
+        <strong>🏅 Better</strong>
+        Improve quality, consistency, reliability, accuracy, and outcomes.
+      </div>
+      <div class="versus">↔</div>
+      <div class="friction-side">
+        <strong>❌ Defects</strong>
+        Errors, quality issues, rework, scrap, missed requirements, and dissatisfaction.
+      </div>
+    </div>
+
+    <div class="pair-card">
+      <div class="value-side">
+        <strong>⏱️ Faster</strong>
+        Reduce waiting, bottlenecks, response time, and unnecessary steps.
+      </div>
+      <div class="versus">↔</div>
+      <div class="friction-side">
+        <strong>⏳ Delays</strong>
+        Waiting, approvals, extended lead times, missed deadlines, and lost opportunities.
+      </div>
+    </div>
+
+    <div class="pair-card">
+      <div class="value-side">
+        <strong>💲 Cheaper</strong>
+        Lower total cost while maintaining or improving value.
+      </div>
+      <div class="versus">↔</div>
+      <div class="friction-side">
+        <strong>💸 Excess Cost</strong>
+        Expense created by inefficiency, complexity, poor decisions, or avoidable activity.
+      </div>
+    </div>
+
+    <div class="pair-card">
+      <div class="value-side">
+        <strong>🛡️ Safer</strong>
+        Reduce risk, instability, errors, injury, and operational exposure.
+      </div>
+      <div class="versus">↔</div>
+      <div class="friction-side">
+        <strong>⚠️ Risk</strong>
+        Exposure to injury, accidents, compliance issues, disruption, or poor outcomes.
+      </div>
+    </div>
+
+    <div class="pair-card">
+      <div class="value-side">
+        <strong>😊 Happier</strong>
+        Improve the experience of customers, employees, suppliers, and stakeholders.
+      </div>
+      <div class="versus">↔</div>
+      <div class="friction-side">
+        <strong>😟 Frustration</strong>
+        Reduced morale, dissatisfaction, confusion, unnecessary stress, and irritation.
+      </div>
+    </div>
+
   </div>
 </section>
 
