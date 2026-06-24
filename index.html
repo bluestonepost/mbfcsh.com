@@ -143,6 +143,15 @@
       margin-bottom: 6px;
     }
 
+    .value-card {
+      background: #f4fbf5;
+      border-left: 5px solid #087333;
+    }
+
+    .value-card strong {
+      color: #087333;
+    }
+
     .friction-card {
       background: #fff7f7;
       border-left: 5px solid #9b1c1c;
@@ -159,16 +168,27 @@
       align-items: center;
     }
 
-    .illustration {
+    .figure-panel {
       text-align: center;
+      margin-top: 24px;
     }
 
-    .illustration img {
-      width: 520px;
+    .figure-panel img {
+      width: 760px;
       max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
       background: white;
+    }
+
+    .figure-panel.small img {
+      width: 560px;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
     }
 
     .preview {
@@ -312,24 +332,42 @@
         organization either toward value creation or toward organizational friction.
       </p>
       <p>
-        The goal is not activity. The goal is net improvement.
+        The goal is not perfection. The goal is <strong>net improvement</strong>.
       </p>
     </div>
-    <div class="illustration">
-      <img src="MBFC_SH_Compass.png" alt="The MBFC+SH Compass illustration">
+    <div class="figure-panel small">
+      <img src="MBFC_SH_Figure_1.1.png" alt="The MBFC+SH Compass illustration">
+      <p class="caption">
+        Every decision moves an organization somewhere. The question is whether it creates net improvement.
+      </p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>The Framework</h2>
+  <h2>Value Creation vs. Organizational Friction</h2>
+  <p>
+    MBFC+SH provides a simple visual language for evaluating both sides of improvement:
+    the desired outcomes a decision may create and the friction it may introduce.
+  </p>
+
+  <div class="figure-panel">
+    <img src="MBFC_SH_Figure_1.2.png" alt="MBFC+SH desired outcomes and organizational friction">
+    <p class="caption">
+      Move toward More, Better, Faster, Cheaper, Safer, and Happier by reducing Waste, Defects, Delays, Excess Cost, Risk, and Frustration.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The Six Desired Outcomes</h2>
   <div class="grid">
-    <div class="card"><strong>More</strong>Increase useful output, capacity, productivity, or customer value.</div>
-    <div class="card"><strong>Better</strong>Improve quality, consistency, reliability, and outcomes.</div>
-    <div class="card"><strong>Faster</strong>Reduce waiting, delays, bottlenecks, and unnecessary steps.</div>
-    <div class="card"><strong>Cheaper</strong>Lower total cost, including hidden cost and avoidable complexity.</div>
-    <div class="card"><strong>Safer</strong>Reduce risk, instability, exposure, and unintended consequences.</div>
-    <div class="card"><strong>Happier</strong>Improve the experience of employees, customers, suppliers, and stakeholders.</div>
+    <div class="card value-card"><strong>📈 More</strong>Increase useful output, capacity, productivity, or customer value.</div>
+    <div class="card value-card"><strong>🏅 Better</strong>Improve quality, consistency, reliability, and outcomes.</div>
+    <div class="card value-card"><strong>⏱️ Faster</strong>Reduce waiting, delays, bottlenecks, and unnecessary steps.</div>
+    <div class="card value-card"><strong>💲 Cheaper</strong>Lower total cost, including hidden cost and avoidable complexity.</div>
+    <div class="card value-card"><strong>🛡️ Safer</strong>Reduce risk, instability, exposure, and unintended consequences.</div>
+    <div class="card value-card"><strong>😊 Happier</strong>Improve the experience of employees, customers, suppliers, and stakeholders.</div>
   </div>
 </section>
 
@@ -341,12 +379,44 @@
   </p>
 
   <div class="grid-wide">
-    <div class="card friction-card"><strong>Waste</strong>Unnecessary consumption of time, materials, labor, money, space, or other resources.</div>
-    <div class="card friction-card"><strong>Defects</strong>Errors, quality issues, rework, scrap, missed requirements, and customer dissatisfaction.</div>
-    <div class="card friction-card"><strong>Delays</strong>Waiting, bottlenecks, approvals, extended lead times, missed deadlines, and lost opportunities.</div>
-    <div class="card friction-card"><strong>Excess Cost</strong>Expense created by inefficiency, complexity, poor decisions, or avoidable activities.</div>
-    <div class="card friction-card"><strong>Risk</strong>Exposure to injury, accidents, compliance issues, operational disruption, or poor outcomes.</div>
-    <div class="card friction-card"><strong>Frustration</strong>Reduced morale, customer dissatisfaction, confusion, unnecessary stress, and stakeholder irritation.</div>
+    <div class="card friction-card"><strong>🗑️ Waste</strong>Unnecessary consumption of time, materials, labor, money, space, or other resources.</div>
+    <div class="card friction-card"><strong>❌ Defects</strong>Errors, quality issues, rework, scrap, missed requirements, and customer dissatisfaction.</div>
+    <div class="card friction-card"><strong>⏳ Delays</strong>Waiting, bottlenecks, approvals, extended lead times, missed deadlines, and lost opportunities.</div>
+    <div class="card friction-card"><strong>💸 Excess Cost</strong>Expense created by inefficiency, complexity, poor decisions, or avoidable activities.</div>
+    <div class="card friction-card"><strong>⚠️ Risk</strong>Exposure to injury, accidents, compliance issues, operational disruption, or poor outcomes.</div>
+    <div class="card friction-card"><strong>😟 Frustration</strong>Reduced morale, customer dissatisfaction, confusion, unnecessary stress, and stakeholder irritation.</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>How the Decision Framework Works</h2>
+  <p>
+    MBFC+SH evaluates each proposed decision by asking four practical questions:
+    What value could it create? What friction could it introduce? What tradeoffs are involved?
+    Does the decision create net improvement for the organization overall?
+  </p>
+
+  <div class="figure-panel">
+    <img src="MBFC_SH_Figure_10.1.png" alt="The MBFC+SH Decision Framework">
+    <p class="caption">
+      The MBFC+SH Decision Framework helps evaluate value creation, friction, tradeoffs, and net improvement.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The MBFC+SH Decision Funnel</h2>
+  <p>
+    The Decision Funnel turns the framework into a practical decision process. A proposed
+    decision is evaluated through value creation, organizational friction, tradeoff analysis,
+    and the final test of net improvement.
+  </p>
+
+  <div class="figure-panel">
+    <img src="MBFC_SH_Figure_15.1.png" alt="The MBFC+SH Decision Funnel">
+    <p class="caption">
+      Proceed, revise, or reject based on whether the benefits outweigh the friction.
+    </p>
   </div>
 </section>
 
@@ -373,20 +443,20 @@
   </p>
 
   <div class="grid-wide">
-    <div class="card"><strong>A Common Language</strong>Learn the six value outcomes and six forms of friction that influence every organization.</div>
-    <div class="card"><strong>The Principle of Net Improvement</strong>Evaluate whether a decision improves the organization overall.</div>
-    <div class="card"><strong>Practical Tools</strong>Use worksheets, audits, scorecards, and question libraries to apply the framework.</div>
-    <div class="card"><strong>A Culture of Improvement</strong>Create better conversations, better decisions, and lasting organizational improvement.</div>
+    <div class="card"><strong>🧭 A Common Language</strong>Learn the six value outcomes and six forms of friction that influence every organization.</div>
+    <div class="card"><strong>⚖️ Net Improvement</strong>Evaluate whether a decision improves the organization overall.</div>
+    <div class="card"><strong>🛠️ Practical Tools</strong>Use worksheets, audits, scorecards, and question libraries to apply the framework.</div>
+    <div class="card"><strong>📈 Culture of Improvement</strong>Create better conversations, better decisions, and lasting organizational improvement.</div>
   </div>
 </section>
 
 <section class="section">
   <h2>Who Should Read MBFC+SH?</h2>
   <div class="grid-wide">
-    <div class="card"><strong>Business Leaders</strong>Evaluate tradeoffs, strategy, investments, policies, and organizational priorities.</div>
-    <div class="card"><strong>Managers & Supervisors</strong>Improve everyday decisions, meetings, processes, and team performance.</div>
-    <div class="card"><strong>Operations Teams</strong>Identify friction in production, logistics, service, administration, and support functions.</div>
-    <div class="card"><strong>Improvement Professionals</strong>Connect Lean, Six Sigma, safety, quality, customer experience, and cost improvement.</div>
+    <div class="card"><strong>👔 Business Leaders</strong>Evaluate tradeoffs, strategy, investments, policies, and organizational priorities.</div>
+    <div class="card"><strong>👥 Managers & Supervisors</strong>Improve everyday decisions, meetings, processes, and team performance.</div>
+    <div class="card"><strong>🏭 Operations Teams</strong>Identify friction in production, logistics, service, administration, and support functions.</div>
+    <div class="card"><strong>🔧 Improvement Professionals</strong>Connect Lean, Six Sigma, safety, quality, customer experience, and cost improvement.</div>
   </div>
 </section>
 
@@ -433,12 +503,42 @@
 <section class="section">
   <h2>Common Problems MBFC+SH Helps Address</h2>
   <div class="grid-wide">
-    <div class="card"><strong>Too Many Approvals</strong>Review whether controls reduce more friction than they create.</div>
-    <div class="card"><strong>Slow Decisions</strong>Identify delays, unclear ownership, bottlenecks, and unnecessary waiting.</div>
-    <div class="card"><strong>Hidden Costs</strong>Look beyond purchase price and expose the true cost of complexity, rework, and delay.</div>
-    <div class="card"><strong>Employee Frustration</strong>Use frustration as a signal that deeper organizational friction may exist.</div>
-    <div class="card"><strong>Poor Follow-Through</strong>Clarify assumptions, ownership, measurement, and review after decisions are made.</div>
-    <div class="card"><strong>Competing Priorities</strong>Give teams a shared language for evaluating tradeoffs and net improvement.</div>
+    <div class="card"><strong>🧾 Too Many Approvals</strong>Review whether controls reduce more friction than they create.</div>
+    <div class="card"><strong>🐢 Slow Decisions</strong>Identify delays, unclear ownership, bottlenecks, and unnecessary waiting.</div>
+    <div class="card"><strong>💰 Hidden Costs</strong>Look beyond purchase price and expose the true cost of complexity, rework, and delay.</div>
+    <div class="card"><strong>😤 Employee Frustration</strong>Use frustration as a signal that deeper organizational friction may exist.</div>
+    <div class="card"><strong>🔁 Poor Follow-Through</strong>Clarify assumptions, ownership, measurement, and review after decisions are made.</div>
+    <div class="card"><strong>⚖️ Competing Priorities</strong>Give teams a shared language for evaluating tradeoffs and net improvement.</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Friction Matters</h2>
+  <p>
+    Small sources of friction accumulate over time. One report, one approval, one meeting,
+    one exception, and one workaround can eventually become system complexity.
+  </p>
+
+  <div class="figure-panel">
+    <img src="MBFC_SH_Figure_17.1.png" alt="The Friction Accumulation Model">
+    <p class="caption">
+      Identify and remove sources of friction early before they accumulate into larger problems.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>From Local Improvement to System Improvement</h2>
+  <p>
+    Many organizations improve one area while unintentionally creating problems elsewhere.
+    MBFC+SH helps teams evaluate decisions across the whole system, not just within one silo.
+  </p>
+
+  <div class="figure-panel">
+    <img src="MBFC_SH_Figure_20.1.png" alt="Local Optimization vs. System Optimization">
+    <p class="caption">
+      Improvement happens when the whole system gets better, not just one part.
+    </p>
   </div>
 </section>
 
@@ -447,22 +547,22 @@
 
   <div class="grid-wide">
     <div class="card">
-      <strong>Governance & Controls</strong>
+      <strong>🧩 Governance & Controls</strong>
       A control may reduce risk but also create delays, cost, and frustration. MBFC+SH helps evaluate whether the control creates net improvement.
     </div>
 
     <div class="card">
-      <strong>Capital Investments</strong>
+      <strong>🏗️ Capital Investments</strong>
       A purchase may look expensive or inexpensive at first glance. MBFC+SH helps evaluate total cost, risk, quality, speed, and long-term benefit.
     </div>
 
     <div class="card">
-      <strong>Process Improvement</strong>
+      <strong>🔄 Process Improvement</strong>
       A process may function as designed while still creating waste, defects, delays, or frustration. MBFC+SH helps identify what should change.
     </div>
 
     <div class="card">
-      <strong>Leadership Decisions</strong>
+      <strong>🧠 Leadership Decisions</strong>
       MBFC+SH helps leaders ask whether a decision improves the overall system rather than merely optimizing one department or metric.
     </div>
   </div>
