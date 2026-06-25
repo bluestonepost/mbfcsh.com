@@ -311,10 +311,9 @@
 
     .book-covers {
       display: flex;
-      gap: 28px;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
       margin-top: 24px;
     }
 
@@ -332,7 +331,8 @@
     }
 
     .book-cover-panel.back-cover img {
-      width: 340px;
+      width: 550px;
+      max-width: 100%;
     }
 
     .author {
@@ -802,7 +802,7 @@
 
 
     <section class="section center">
-      <h2>See the Complete Book</h2>
+      <h2>Preview the Book</h2>
       <p>
         The front and back covers summarize the MBFC+SH promise: better decisions,
         less organizational friction, practical tools, and a path toward net improvement.
