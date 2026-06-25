@@ -837,3 +837,842 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MBFC+SH | Better Decisions, Less Friction, Better Organizations</title>
+  <meta name="description" content="MBFC+SH is a practical decision-making and continuous improvement framework that helps organizations create more value while reducing waste, defects, delays, excess cost, risk, and frustration." />
+
+  <style>
+    :root {
+      --green: #033c22;
+      --green-bright: #087333;
+      --cream: #f8f5ef;
+      --cream-light: #f8eee0;
+      --gold: #f3c969;
+      --red: #9b1c1c;
+      --text: #1f2933;
+      --muted: #555;
+      --border: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+    }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 70px 24px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 50px;
+      align-items: center;
+      max-width: 1050px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-cover {
+      flex: 0 0 310px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 310px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      background: white;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      color: var(--green);
+      margin-top: 0;
+      line-height: 1.25;
+    }
+
+    h3 {
+      color: var(--green);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--cream-light);
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 22px 0 8px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: nowrap;
+      margin-top: 28px;
+      align-items: stretch;
+    }
+
+    .hero-buttons .button {
+      flex: 1 1 0;
+      min-width: 0;
+      text-align: center;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--cream-light);
+      color: var(--green);
+      padding: 14px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 18px;
+      margin-right: 10px;
+      border: 1px solid transparent;
+    }
+
+    .button.secondary {
+      background: var(--green);
+      color: white;
+    }
+
+    .button.light {
+      background: white;
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    .button.gold {
+      background: var(--gold);
+      color: var(--green);
+    }
+
+    .section {
+      background: white;
+      margin: 30px 0;
+      padding: 34px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .highlight {
+      background: var(--green);
+      color: white;
+    }
+
+    .highlight h2,
+    .highlight h3 {
+      color: white;
+    }
+
+    .highlight .card {
+      background: var(--cream);
+      color: var(--text);
+      min-height: 120px;
+    }
+
+    .highlight .card strong {
+      color: var(--green);
+    }
+
+    .soft-highlight {
+      background: #fdf8ea;
+      border: 1px solid #ead79c;
+    }
+
+    .grid-wide,
+    .three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .two-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--cream);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid var(--green);
+    }
+
+    .card strong {
+      display: block;
+      font-size: 20px;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .value-card {
+      background: #f4fbf5;
+      border-left: 5px solid var(--green-bright);
+    }
+
+    .value-card strong {
+      color: var(--green-bright);
+    }
+
+    .friction-card {
+      background: #fff7f7;
+      border-left: 5px solid var(--red);
+    }
+
+    .friction-card strong {
+      color: var(--red);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      align-items: center;
+    }
+
+    .figure-panel {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .figure-panel img {
+      width: 760px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      background: white;
+    }
+
+    .figure-panel.small {
+      margin-top: 0;
+    }
+
+    .figure-panel.small img {
+      width: 560px;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .highlight .caption {
+      color: var(--cream-light);
+    }
+
+    .downloads {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .download-link {
+      display: block;
+      padding: 16px;
+      background: var(--cream);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--green);
+      font-weight: bold;
+      border: 1px solid var(--border);
+    }
+
+    .download-link span {
+      display: block;
+      color: var(--muted);
+      font-weight: normal;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .problem-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .problem-item {
+      background: #fff7f7;
+      border-left: 4px solid var(--red);
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+
+    .book-covers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-top: 24px;
+    }
+
+    .book-cover-panel {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .book-cover-panel img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+      background: white;
+    }
+
+    .book-cover-panel.back-cover img {
+      width: 550px;
+      max-width: 100%;
+    }
+
+    .author {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .author img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #ddd;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-wide,
+      .three-grid,
+      .downloads,
+      .problem-list,
+      .two-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+      }
+
+      header {
+        padding: 45px 24px;
+      }
+
+      .section {
+        padding: 26px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        gap: 30px;
+      }
+
+      .hero-cover {
+        flex: 0 0 auto;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .grid-wide,
+      .three-grid,
+      .downloads,
+      .problem-list,
+      .two-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>MBFC+SH</h1>
+        <div class="subtitle">More, Better, Faster, Cheaper + Safer, Happier</div>
+        <p class="tagline">Better decisions. Less friction. Better organizations.</p>
+        <p>
+          Organizations rarely fail because people do not care. They struggle when
+          good intentions create unintended consequences. MBFC+SH helps leaders create
+          more value while reducing waste, delays, cost, risk, defects, and frustration.
+        </p>
+        <div class="hero-buttons">
+          <a class="button" href="PASTE_AMAZON_LINK_HERE" target="_blank">Buy the Book</a>
+          <a class="button light" href="#tools">Free Tools</a>
+          <a class="button light" href="#training">Training & Consulting</a>
+        </div>
+      </div>
+
+      <div class="hero-cover">
+        <img src="MBFC_SH_Book_Cover_Front.png" alt="MBFC+SH book cover">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section soft-highlight">
+      <h2>Why MBFC+SH Was Created</h2>
+      <p>
+        Improvement efforts often begin with good intentions, but decisions made in one area
+        can create friction somewhere else. Costs are reduced while quality suffers. Controls
+        are added while delays increase. Meetings multiply while decisions slow. Technology is
+        implemented while frustration grows.
+      </p>
+      <p>
+        MBFC+SH emerged from one practical question:
+        <strong>Does this decision create net improvement for the organization as a whole?</strong>
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="split">
+        <div>
+          <h2>The MBFC+SH Compass</h2>
+          <p>
+            Every decision moves an organization somewhere. MBFC+SH helps leaders,
+            managers, teams, and individuals evaluate whether a decision moves the
+            organization toward More, Better, Faster, Cheaper, Safer, and Happier.
+          </p>
+          <p>
+            The goal is not activity. The goal is <strong>net improvement</strong>.
+          </p>
+        </div>
+
+        <div class="figure-panel small">
+          <img src="MBFC_SH_Figure_1.1.png" alt="The MBFC+SH Compass illustration">
+          <p class="caption">
+            Every decision moves an organization somewhere. The question is whether it creates net improvement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Inside the Book</h2>
+      <p>
+        MBFC+SH provides a common language for improvement, a practical decision framework,
+        real-world examples, and tools for applying the framework to meetings, policies,
+        controls, capital investments, and continuous improvement.
+      </p>
+
+      <div class="grid-wide">
+        <div class="card">
+          <strong>🧭 A Common Language</strong>
+          Learn the six value outcomes and six forms of friction that influence every organization.
+        </div>
+
+        <div class="card">
+          <strong>⚖️ Net Improvement</strong>
+          Evaluate whether a decision improves the organization overall rather than optimizing a single area.
+        </div>
+
+        <div class="card">
+          <strong>🛠️ Practical Tools</strong>
+          Apply the framework using worksheets, audits, toolkits, and question libraries.
+        </div>
+
+        <div class="card">
+          <strong>🔍 Friction Reduction</strong>
+          Identify and reduce Waste, Defects, Delays, Excess Cost, Risk, and Frustration.
+        </div>
+
+        <div class="card">
+          <strong>🎯 Real-World Applications</strong>
+          Apply MBFC+SH to leadership decisions, process improvement, governance, controls, and capital investments.
+        </div>
+
+        <div class="card">
+          <strong>📈 Culture of Improvement</strong>
+          Create better conversations, better decisions, and lasting organizational improvement.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Value Creation vs. Organizational Friction</h2>
+      <p>
+        MBFC+SH provides a simple visual language for evaluating both sides of improvement:
+        the value a decision may create and the friction it may introduce.
+      </p>
+
+      <div class="figure-panel">
+        <img src="MBFC_SH_Figure_1.2.png" alt="MBFC+SH desired outcomes and organizational friction">
+        <p class="caption">
+          Move toward More, Better, Faster, Cheaper, Safer, and Happier by reducing Waste, Defects, Delays, Excess Cost, Risk, and Frustration.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Framework</h2>
+      <p>
+        The book presents MBFC+SH as two related lists: desired outcomes that create value
+        and forms of organizational friction that prevent improvement.
+      </p>
+
+      <h3>Value Creation</h3>
+      <div class="grid-wide">
+        <div class="card value-card"><strong>📈 More</strong>Increase useful output, capacity, productivity, or customer value.</div>
+        <div class="card value-card"><strong>🏅 Better</strong>Improve quality, consistency, reliability, accuracy, and outcomes.</div>
+        <div class="card value-card"><strong>⏱️ Faster</strong>Reduce waiting, bottlenecks, response time, and unnecessary steps.</div>
+        <div class="card value-card"><strong>💲 Cheaper</strong>Lower total cost while maintaining or improving value.</div>
+        <div class="card value-card"><strong>🛡️ Safer</strong>Reduce risk, instability, errors, injury, and operational exposure.</div>
+        <div class="card value-card"><strong>😊 Happier</strong>Improve the experience of customers, employees, suppliers, and stakeholders.</div>
+      </div>
+
+      <h3 style="margin-top: 34px;">Organizational Friction</h3>
+      <div class="grid-wide">
+        <div class="card friction-card"><strong>🗑️ Waste</strong>Unnecessary consumption of time, materials, labor, money, space, or resources.</div>
+        <div class="card friction-card"><strong>❌ Defects</strong>Errors, quality issues, rework, scrap, missed requirements, and dissatisfaction.</div>
+        <div class="card friction-card"><strong>⏳ Delays</strong>Waiting, approvals, extended lead times, missed deadlines, and lost opportunities.</div>
+        <div class="card friction-card"><strong>💸 Excess Cost</strong>Expense created by inefficiency, complexity, poor decisions, or avoidable activity.</div>
+        <div class="card friction-card"><strong>⚠️ Risk</strong>Exposure to injury, accidents, compliance issues, disruption, or poor outcomes.</div>
+        <div class="card friction-card"><strong>😟 Frustration</strong>Reduced morale, dissatisfaction, confusion, unnecessary stress, and irritation.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>A Simple Example</h2>
+      <p>
+        A company chooses the lowest-cost supplier. On the surface, the decision appears to support a Cheaper outcome.
+      </p>
+
+      <div class="grid-wide">
+        <div class="card value-card">
+          <strong>✅ Local Benefit</strong>
+          Purchase price decreases, and the decision appears successful within purchasing.
+        </div>
+
+        <div class="card friction-card">
+          <strong>⚠️ Hidden Friction</strong>
+          Material quality becomes less consistent, defects increase, and rework grows.
+        </div>
+
+        <div class="card friction-card">
+          <strong>❌ System Result</strong>
+          Customer complaints, delays, inspections, and total cost increase.
+        </div>
+      </div>
+
+      <p>
+        The purchase looked successful locally but failed at the system level. MBFC+SH helps teams evaluate both value creation and organizational friction before deciding.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>How the Decision Framework Works</h2>
+      <p>
+        MBFC+SH evaluates each proposed decision by asking four practical questions:
+        What value could it create? What friction could it introduce? What tradeoffs are involved?
+        Does the decision create net improvement for the organization overall?
+      </p>
+
+      <div class="figure-panel">
+        <img src="MBFC_SH_Figure_10.1.png" alt="The MBFC+SH Decision Framework">
+        <p class="caption">
+          The MBFC+SH Decision Framework helps evaluate value creation, friction, tradeoffs, and net improvement.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The MBFC+SH Decision Funnel</h2>
+      <p>
+        The Decision Funnel turns the framework into a practical decision process. A proposed
+        decision is evaluated through value creation, organizational friction, tradeoff analysis,
+        and the final test of net improvement.
+      </p>
+
+      <div class="figure-panel">
+        <img src="MBFC_SH_Figure_15.1.png" alt="The MBFC+SH Decision Funnel">
+        <p class="caption">
+          Proceed, revise, or reject based on whether the benefits outweigh the friction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Common Problems MBFC+SH Helps Address</h2>
+      <div class="grid-wide">
+        <div class="card"><strong>🧾 Too Many Approvals</strong>Review whether controls reduce more friction than they create.</div>
+        <div class="card"><strong>🐢 Slow Decisions</strong>Identify delays, unclear ownership, bottlenecks, and unnecessary waiting.</div>
+        <div class="card"><strong>💰 Hidden Costs</strong>Look beyond purchase price and expose the true cost of complexity, rework, and delay.</div>
+        <div class="card"><strong>😤 Employee Frustration</strong>Use frustration as a signal that deeper organizational friction may exist.</div>
+        <div class="card"><strong>🔁 Poor Follow-Through</strong>Clarify assumptions, ownership, measurement, and review after decisions are made.</div>
+        <div class="card"><strong>⚖️ Competing Priorities</strong>Give teams a shared language for evaluating tradeoffs and net improvement.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Who Should Read MBFC+SH?</h2>
+      <div class="grid-wide">
+        <div class="card"><strong>👔 Business Leaders</strong>Evaluate tradeoffs, strategy, investments, policies, and organizational priorities.</div>
+        <div class="card"><strong>👥 Managers & Supervisors</strong>Improve everyday decisions, meetings, processes, and team performance.</div>
+        <div class="card"><strong>🏭 Operations Teams</strong>Identify friction in production, logistics, service, administration, and support functions.</div>
+        <div class="card"><strong>🔧 Improvement Professionals</strong>Connect Lean, Six Sigma, safety, quality, customer experience, and cost improvement.</div>
+        <div class="card"><strong>🏢 Small Businesses</strong>Improve decisions, simplify work, and reduce recurring problems without adding complexity.</div>
+        <div class="card"><strong>🏛️ Public & Nonprofit Teams</strong>Improve services, accountability, resource use, and stakeholder outcomes.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>From Local Improvement to System Improvement</h2>
+      <p>
+        Many organizations improve one area while unintentionally creating problems elsewhere.
+        MBFC+SH helps teams evaluate decisions across the whole system, not just within one silo.
+      </p>
+
+      <div class="figure-panel">
+        <img src="MBFC_SH_Figure_20.1.png" alt="Local Optimization vs. System Optimization">
+        <p class="caption">
+          Improvement happens when the whole system gets better, not just one part.
+        </p>
+      </div>
+    </section>
+
+    <section class="section soft-highlight">
+      <h2>Take the MBFC+SH Friction Test</h2>
+      <p>
+        Is your organization experiencing friction? If several of these sound familiar,
+        the MBFC+SH tools may help identify what is slowing improvement.
+      </p>
+
+      <div class="problem-list">
+        <div class="problem-item">Too many approvals?</div>
+        <div class="problem-item">Too many meetings?</div>
+        <div class="problem-item">Too many reports?</div>
+        <div class="problem-item">Slow decisions?</div>
+        <div class="problem-item">Recurring workarounds?</div>
+        <div class="problem-item">Employee frustration?</div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <h2>Download the MBFC+SH Tools</h2>
+      <p>
+        Use these appendix tools to evaluate decisions, identify friction, review controls,
+        and apply the MBFC+SH framework in real-world situations. The tools are designed
+        to complement the book, which explains when, why, and how to apply them effectively.
+      </p>
+
+      <div class="downloads">
+        <a class="download-link" href="MBFC_SH_Appendix_A_Decision_Worksheet.pdf" target="_blank">
+          Decision Worksheet
+          <span>Evaluate value creation, friction, tradeoffs, assumptions, and follow-up.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_B_Organizational_Audit.pdf" target="_blank">
+          Organizational Audit
+          <span>Identify Waste, Defects, Delays, Excess Cost, Risk, and Frustration.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_C_Governance_Capital_Control_Review_Toolkit.pdf" target="_blank">
+          Governance, Capital & Control Review Toolkit
+          <span>Evaluate controls, policies, capital investments, and governance burden.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_D_Friction_Identification_Prioritization_Toolkit.pdf" target="_blank">
+          Friction Identification & Prioritization Toolkit
+          <span>Find and prioritize the friction most worth addressing first.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_E_Friction_Library.pdf" target="_blank">
+          Friction Library
+          <span>Reference common examples of organizational friction.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_F_Implementation_Guide.pdf" target="_blank">
+          Implementation Guide
+          <span>Introduce MBFC+SH through conversations, meetings, decisions, and feedback loops.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_G_Glossary_of_Key_Terms.pdf" target="_blank">
+          Glossary of Key Terms
+          <span>Definitions and explanations of important MBFC+SH concepts and terminology.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_H_Capstone_Reflection_Questions.pdf" target="_blank">
+          Capstone Reflection Questions
+          <span>Questions designed to reinforce learning and encourage application of the framework.</span>
+        </a>
+
+        <a class="download-link" href="MBFC_SH_Appendix_I_Question_Library.pdf" target="_blank">
+          Question Library
+          <span>Use practical questions to improve decisions and discussions.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section highlight" id="training">
+      <h2>Book + Training + Consulting</h2>
+
+      <p>
+        MBFC+SH is more than a book. It is a practical framework for helping organizations
+        improve decisions, reduce friction, and create a culture of continuous improvement.
+      </p>
+
+      <div class="three-grid">
+        <div class="card">
+          <strong>📘 Book</strong>
+          Practical framework, real-world examples, worksheets, audits, review tools,
+          and decision-making guides.
+        </div>
+
+        <div class="card">
+          <strong>🎓 Training</strong>
+          Workshops that teach teams how to evaluate tradeoffs, identify friction,
+          improve meetings, and make better decisions.
+        </div>
+
+        <div class="card">
+          <strong>🤝 Consulting</strong>
+          Support for friction audits, process reviews, governance evaluations,
+          controls reviews, and improvement initiatives.
+        </div>
+      </div>
+
+      <p style="margin-top:25px;">
+        Training and consulting engagements can be customized for leadership teams,
+        operations teams, administrative functions, nonprofits, government agencies,
+        and small businesses.
+      </p>
+
+      <a class="button gold" href="mailto:PASTE_EMAIL_ADDRESS_HERE?subject=MBFC%2BSH Training and Consulting Inquiry">Request Information</a>
+    </section>
+
+    <section class="section">
+      <h2>Example Training & Consulting Topics</h2>
+      <div class="grid-wide">
+        <div class="card"><strong>🧭 Framework Workshops</strong>Teach teams how to use MBFC+SH as a practical decision language.</div>
+        <div class="card"><strong>🔍 Friction Audits</strong>Identify recurring sources of waste, delay, cost, risk, defects, and frustration.</div>
+        <div class="card"><strong>⚖️ Tradeoff Reviews</strong>Evaluate the benefits, burdens, risks, and unintended consequences of proposed decisions.</div>
+        <div class="card"><strong>🏛️ Governance & Controls</strong>Review whether policies, approvals, reports, and controls create more value than burden.</div>
+        <div class="card"><strong>🏗️ Capital Investment Evaluation</strong>Assess total cost, risk, benefit, and system impact before major spending decisions.</div>
+        <div class="card"><strong>🌐 System Optimization</strong>Help teams avoid improving one area while creating problems elsewhere.</div>
+      </div>
+    </section>
+
+    <section class="section author">
+      <img src="Daniel_Nichols.jpg" alt="Daniel Nichols">
+      <div>
+        <h2>About the Author</h2>
+        <p>
+          Daniel Nichols is an operations leader with experience in manufacturing,
+          supply chain, logistics, process improvement, and practical business decision-making.
+          MBFC+SH distills lessons learned from real-world decisions into a practical
+          framework for evaluating tradeoffs, reducing friction, and creating lasting improvement.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="section center">
+      <h2>Preview the Book</h2>
+      <p>
+        The front and back covers summarize the MBFC+SH promise: better decisions,
+        less organizational friction, practical tools, and a path toward net improvement.
+      </p>
+
+      <div class="book-covers">
+        <div class="book-cover-panel">
+          <img src="MBFC_SH_Book_Cover_Front.png" alt="MBFC+SH front book cover">
+        </div>
+
+        <div class="book-cover-panel back-cover">
+          <img src="MBFC_SH_Book_Cover_Back.png" alt="MBFC+SH back book cover">
+        </div>
+      </div>
+    </section>
+
+    <section class="section center highlight">
+      <h2>Every Decision Changes an Organization</h2>
+      <p>
+        Learn how to consistently move yours toward More, Better, Faster, Cheaper, Safer, and Happier.
+      </p>
+      <a class="button gold" href="PASTE_AMAZON_LINK_HERE" target="_blank">Buy the Book</a>
+      <a class="button" href="mailto:PASTE_EMAIL_ADDRESS_HERE?subject=MBFC%2BSH Training and Consulting Inquiry">Request Training</a>
+      <a class="button light" href="mailto:PASTE_EMAIL_ADDRESS_HERE?subject=MBFC%2BSH Bulk Book Order Inquiry">Bulk Book Orders</a>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Daniel Nichols. All rights reserved.
+  </footer>
+
+</body>
+</html>
