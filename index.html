@@ -35,7 +35,7 @@
     .container {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 56px 24px 40px;
     }
 
     header {
@@ -102,6 +102,22 @@
       font-size: 20px;
       font-weight: bold;
       margin: 22px 0 8px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: nowrap;
+      margin-top: 28px;
+      align-items: stretch;
+    }
+
+    .hero-buttons .button {
+      flex: 1 1 0;
+      min-width: 0;
+      text-align: center;
+      margin: 0;
+      white-space: nowrap;
     }
 
     .button {
@@ -292,6 +308,33 @@
       font-weight: bold;
     }
 
+
+    .book-covers {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .book-cover-panel {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .book-cover-panel img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+      background: white;
+    }
+
+    .book-cover-panel.back-cover img {
+      width: 340px;
+    }
+
     .author {
       display: flex;
       gap: 28px;
@@ -354,6 +397,15 @@
         flex: 0 0 auto;
       }
 
+      .hero-buttons {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
       .grid-wide,
       .three-grid,
       .downloads,
@@ -374,12 +426,15 @@
         <div class="subtitle">More, Better, Faster, Cheaper + Safer, Happier</div>
         <p class="tagline">Better decisions. Less friction. Better organizations.</p>
         <p>
-          MBFC+SH is a practical framework for helping organizations create more value
-          while reducing Waste, Defects, Delays, Excess Cost, Risk, and Frustration.
+          Organizations rarely fail because people do not care. They struggle when
+          good intentions create unintended consequences. MBFC+SH helps leaders create
+          more value while reducing waste, delays, cost, risk, defects, and frustration.
         </p>
-        <a class="button" href="PASTE_AMAZON_LINK_HERE" target="_blank">Buy the Book on Amazon</a>
-        <a class="button light" href="#tools">Download the Tools</a>
-        <a class="button light" href="#training">Training & Consulting</a>
+        <div class="hero-buttons">
+          <a class="button" href="PASTE_AMAZON_LINK_HERE" target="_blank">Buy the Book</a>
+          <a class="button light" href="#tools">Free Tools</a>
+          <a class="button light" href="#training">Training & Consulting</a>
+        </div>
       </div>
 
       <div class="hero-cover">
@@ -393,9 +448,10 @@
     <section class="section soft-highlight">
       <h2>Why MBFC+SH Was Created</h2>
       <p>
-        Organizations often solve one problem while unintentionally creating others.
-        Costs are reduced while quality suffers. Controls are added while delays increase.
-        Meetings multiply while decisions slow. Technology is implemented while frustration grows.
+        Improvement efforts often begin with good intentions, but decisions made in one area
+        can create friction somewhere else. Costs are reduced while quality suffers. Controls
+        are added while delays increase. Meetings multiply while decisions slow. Technology is
+        implemented while frustration grows.
       </p>
       <p>
         MBFC+SH emerged from one practical question:
@@ -741,6 +797,25 @@
           MBFC+SH distills lessons learned from real-world decisions into a practical
           framework for evaluating tradeoffs, reducing friction, and creating lasting improvement.
         </p>
+      </div>
+    </section>
+
+
+    <section class="section center">
+      <h2>See the Complete Book</h2>
+      <p>
+        The front and back covers summarize the MBFC+SH promise: better decisions,
+        less organizational friction, practical tools, and a path toward net improvement.
+      </p>
+
+      <div class="book-covers">
+        <div class="book-cover-panel">
+          <img src="MBFC_SH_Book_Cover_Front.png" alt="MBFC+SH front book cover">
+        </div>
+
+        <div class="book-cover-panel back-cover">
+          <img src="MBFC_SH_Book_Cover_Back.png" alt="MBFC+SH back book cover">
+        </div>
       </div>
     </section>
 
