@@ -333,21 +333,27 @@
 
     .author {
       display: flex;
-      gap: 28px;
       align-items: flex-start;
-      flex-wrap: wrap;
+      gap: 32px;
     }
 
     .author img {
-      width: 220px;
-      height: 275px;
+      flex: 0 0 180px;
+      width: 180px;
+      height: 220px;
       object-fit: cover;
-      object-position: center top;
+      object-position: 28% center;
       border-radius: 10px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-      background: #ddd;
+      box-shadow: 0 8px 22px rgba(0,0,0,.18);
     }
 
+    .author > div {
+      flex: 1;
+    }
+
+    .author h2 {
+      margin-top: 0;
+    }
     .center {
       text-align: center;
     }
