@@ -75,3 +75,34 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .cost-image-stage img{width:100%;height:100%;display:block;object-fit:cover;opacity:1;transition:opacity .25s ease}
 .cost-image-stage img.is-fading{opacity:0}
 @media(prefers-reduced-motion:reduce){.cost-image-stage img{transition:none}}
+
+/* Four-book journey card alignment and cover-style typography */
+.journey-grid .book{
+  display:grid;
+  grid-template-rows:22px 200px 72px 16px 48px 86px 48px 52px minmax(120px,1fr) 28px;
+  align-items:start;
+  text-align:center;
+  min-height:760px;
+}
+.journey-grid .book .num,.journey-grid .book .role,.journey-grid .book-purpose,.journey-grid .cover-title,.journey-grid .cover-subtitle,.journey-grid .book-equation,.journey-grid .book-explore{text-align:center}
+.journey-grid .journey-cover{height:200px;margin:0;align-self:center}
+.journey-grid .symbol{height:72px}
+.journey-grid .role{align-self:center}
+.book-purpose{font-size:13px;font-weight:800;line-height:1.25;color:var(--muted);display:flex;align-items:center;justify-content:center;padding:0 4px}
+.cover-title{margin:0!important;color:var(--navy)!important;font-size:23px!important;line-height:.98!important;letter-spacing:.025em;font-weight:900;display:flex;flex-direction:column;align-items:center;justify-content:center;text-transform:uppercase}
+.cover-title .small-the{font-size:11px;line-height:1.1;letter-spacing:.18em;margin-bottom:3px}
+.cover-subtitle{font-size:14px;line-height:1.22;font-weight:800;color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 3px}
+.book-equation{align-self:center;font-size:12px;line-height:1.15;font-weight:900;letter-spacing:.075em;color:var(--gold);border-top:1px solid rgba(184,138,53,.42);border-bottom:1px solid rgba(184,138,53,.42);padding:9px 4px;width:100%;display:flex;align-items:center;justify-content:center}
+.book-equation-stacked{flex-direction:column;gap:3px;font-size:10px;letter-spacing:.055em}
+.journey-grid .book p.book-description{text-align:left;margin:8px 0 0;font-size:14px;line-height:1.48}
+.journey-grid .book a.book-explore{margin:0;align-self:end;font-weight:900;color:var(--navy);text-decoration:none}
+@media(max-width:900px){.journey-grid .book{min-height:730px;grid-template-rows:22px 200px 72px 16px 48px 86px 48px 52px minmax(100px,1fr) 28px}}
+@media(max-width:580px){.journey-grid .book{min-height:auto;grid-template-rows:22px 200px 72px 16px 48px 86px 48px 52px auto 28px;row-gap:3px}.journey-grid .book p.book-description{min-height:0;margin-bottom:18px}}
+
+/* Full cover-equation treatments */
+.book-equation{flex-direction:column;gap:3px}
+.book-equation .equation-outcome{font-size:1.08em;letter-spacing:.09em}
+.book-page-equation{padding:24px 0 0;background:var(--cream)}
+.book-equation-display{max-width:520px;margin:0 auto;text-align:center;border-top:1px solid rgba(184,138,53,.48);border-bottom:1px solid rgba(184,138,53,.48);padding:12px 18px;color:var(--gold);font-weight:900;letter-spacing:.075em;line-height:1.2;display:flex;flex-direction:column;gap:5px}
+.book-equation-display .equation-outcome{font-size:1.08em;letter-spacing:.1em}
+@media(max-width:700px){.book-page-equation{padding-top:18px}.book-equation-display{max-width:min(88vw,520px);padding:10px 12px;font-size:12px}}
