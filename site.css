@@ -28,14 +28,14 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .friction-group .language-group-heading span{color:#8d2830}
 .language-group-heading h3{margin:0;font-size:1.35rem}
 .language-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.language-card{display:flex;align-items:center;gap:16px;padding:18px;border:1px solid rgba(22,45,36,.12);border-radius:14px;background:#fff;min-height:126px}
-.language-card img{width:74px;height:74px;object-fit:contain;flex:0 0 74px}
+.language-card{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid rgba(22,45,36,.12);border-radius:14px;background:#fff;min-height:104px}
+.language-card img{width:60px;height:60px;object-fit:contain;flex:0 0 60px}
 .language-card strong{display:block;font-size:1.08rem;margin-bottom:5px}
 .language-card p{margin:0;line-height:1.45;font-size:.94rem}
 .value-group .language-card{border-top:3px solid rgba(23,107,69,.58)}
 .friction-group .language-card{border-top:3px solid rgba(141,40,48,.58)}
 @media(max-width:900px){.language-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.language-grid{grid-template-columns:1fr}.language-card{min-height:auto}.language-card img{width:62px;height:62px;flex-basis:62px}}
+@media(max-width:600px){.language-grid{grid-template-columns:1fr}.language-card{min-height:auto}.language-card img{width:50px;height:50px;flex-basis:50px}}
 
 /* v7: Book 2 — The Language of Judgment */
 .judgment-language .section-title{max-width:760px;margin-bottom:34px}
@@ -45,11 +45,11 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .judgment-group-head>span{font-family:Georgia,'Times New Roman',serif;font-size:1.55rem;font-weight:700;color:#17334a}
 .judgment-group-head p{margin:0;color:#5d6a72;max-width:650px}
 .judgment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.judgment-card{background:#fff;border:1px solid rgba(22,53,77,.13);border-radius:14px;padding:22px;box-shadow:0 10px 28px rgba(20,43,61,.06)}
-.judgment-card img{display:block;width:104px;height:104px;object-fit:contain;margin:0 auto 15px;filter:drop-shadow(0 7px 9px rgba(17,54,88,.14))}
+.judgment-card{background:#fff;border:1px solid rgba(22,53,77,.13);border-radius:14px;padding:18px 20px;box-shadow:0 10px 28px rgba(20,43,61,.06)}
+.judgment-card img{display:block;width:60px;height:60px;object-fit:contain;margin:0 auto 12px;filter:drop-shadow(0 5px 7px rgba(17,54,88,.12))}
 .judgment-card strong{display:block;font-size:1.05rem;color:#17334a;margin-bottom:7px}
 .judgment-card span{display:block;line-height:1.55;color:#59666f;font-size:.94rem}
 .judgment-close{text-align:center;margin:54px auto 6px;font-size:1.05rem;letter-spacing:.12em;font-weight:800;color:#17334a}
 .judgment-close span{color:#3476a6}
 @media(max-width:820px){.judgment-grid{grid-template-columns:repeat(2,1fr)}.judgment-group-head{grid-template-columns:1fr;gap:6px}}
-@media(max-width:540px){.judgment-grid{grid-template-columns:1fr}.judgment-card{display:grid;grid-template-columns:82px 1fr;column-gap:16px;align-items:start}.judgment-card img{width:78px;height:78px;grid-row:1/3;margin:0}.judgment-card strong{align-self:end}.judgment-close{line-height:1.8}}
+@media(max-width:540px){.judgment-grid{grid-template-columns:1fr}.judgment-card{display:grid;grid-template-columns:58px 1fr;column-gap:14px;align-items:start}.judgment-card img{width:50px;height:50px;grid-row:1/3;margin:0}.judgment-card strong{align-self:end}.judgment-close{line-height:1.8}}
