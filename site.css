@@ -61,8 +61,10 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 /* v11 — primary framework visuals */
 .framework-visual{display:flex;justify-content:center;align-items:center;margin:10px auto 34px}
 .framework-visual img{display:block;width:auto;height:auto;max-width:100%;object-fit:contain}
-.framework-visual-tall img{max-width:340px;max-height:440px}
-.framework-visual-wide img{max-width:440px;max-height:440px}
-.framework-visual-landscape img{max-width:600px;max-height:450px}
-.architecture-intro img{width:min(400px,78vw);max-height:440px;object-fit:contain}
-@media(max-width:700px){.framework-visual{margin:6px auto 26px}.framework-visual-tall img{max-width:min(78vw,320px)}.framework-visual-wide img{max-width:min(88vw,400px)}.framework-visual-landscape img{max-width:92vw}.architecture-intro img{width:min(84vw,380px);max-height:none}}
+.framework-visual-tall img{max-width:520px;max-height:650px}
+.framework-visual-wide img{max-width:760px;max-height:660px}
+.framework-visual-landscape img{max-width:820px;max-height:620px}
+.architecture-intro img{width:min(620px,88vw);max-height:650px;object-fit:contain}
+@media(max-width:700px){.framework-visual{margin:6px auto 26px}.framework-visual-tall img{max-width:min(92vw,480px)}.framework-visual-wide img,.framework-visual-landscape img{max-width:96vw}.architecture-intro img{width:94vw;max-height:none}}
+/* Book 4: text-only leadership transition after framework consolidation */
+.leader-transition:has(> div:only-child){display:block;max-width:850px;margin:34px auto 26px}
