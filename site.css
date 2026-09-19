@@ -68,3 +68,10 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 @media(max-width:700px){.framework-visual{margin:6px auto 26px}.framework-visual-tall img{max-width:min(92vw,480px)}.framework-visual-wide img,.framework-visual-landscape img{max-width:96vw}.architecture-intro img{width:94vw;max-height:none}}
 /* Book 4: text-only leadership transition after framework consolidation */
 .leader-transition:has(> div:only-child){display:block;max-width:850px;margin:34px auto 26px}
+
+
+/* Homepage cost-of-decision rotator */
+.cost-image-stage{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:9px;background:#eee6d6}
+.cost-image-stage img{width:100%;height:100%;display:block;object-fit:cover;opacity:1;transition:opacity .25s ease}
+.cost-image-stage img.is-fading{opacity:0}
+@media(prefers-reduced-motion:reduce){.cost-image-stage img{transition:none}}
