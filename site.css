@@ -169,3 +169,15 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .book-equation .formula-negative,.book-equation-display .formula-negative{color:var(--red)}
 .book-equation .formula-sign,.book-equation-display .formula-sign{color:var(--gold);padding:0 .12em}
 .book-equation .formula-causal,.book-equation-display .formula-causal{color:var(--navy)}
+
+/* v13: homepage book-card alignment */
+@media(min-width:901px){
+.journey-grid .book{grid-template-rows:22px 200px 72px 16px 48px 58px 48px 38px minmax(120px,1fr) 28px;min-height:735px}
+.journey-grid .cover-title{height:58px;justify-content:center}
+.journey-grid .cover-title .main-title{white-space:nowrap;font-size:20px;letter-spacing:.015em}
+.journey-grid .cover-title.has-the .main-title{font-size:20px}
+.journey-grid .book-equation{flex-direction:row;gap:3px;white-space:nowrap;font-size:9px;letter-spacing:.035em;padding-left:1px;padding-right:1px}
+.journey-grid .book-equation .equation-outcome{font-size:1em;letter-spacing:.04em}
+.journey-grid .book-equation .formula-sep{color:var(--gold);padding:0 .1em}
+}
+@media(max-width:900px){.journey-grid .book-equation .formula-sep{display:none}}
