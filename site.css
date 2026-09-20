@@ -162,3 +162,10 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 /* purchase, contact, and navigation refinements */
 .btn.amazon{background:#fff7e6;color:#071f4b;border-color:#b98210}.btn.amazon:hover{background:#f7e7bd}.book-card-actions{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.book-card-actions .book-explore{margin-top:0}.book-amazon{font-size:12px;font-weight:900;color:#7a5700!important;text-decoration:none;border-bottom:1px solid #b98210}.footer-connect{margin-top:7px}.footer-connect a{color:#fff;text-decoration:none;font-weight:800}.resource-book-footer{display:flex;gap:10px;flex-wrap:wrap}.about .actions.left{margin-top:18px}.utility a:hover{color:var(--green)}
 @media(max-width:580px){.utility{gap:10px}.utility a{font-size:12px}.utility a[href="case-studies.html"]{display:none}}
+
+/* Series formula color language — aligned with book-cover semantics */
+.book-equation .equation-outcome,.book-equation-display .equation-outcome{color:var(--green)}
+.book-equation .formula-positive,.book-equation-display .formula-positive{color:var(--green)}
+.book-equation .formula-negative,.book-equation-display .formula-negative{color:var(--red)}
+.book-equation .formula-sign,.book-equation-display .formula-sign{color:var(--gold);padding:0 .12em}
+.book-equation .formula-causal,.book-equation-display .formula-causal{color:var(--navy)}
