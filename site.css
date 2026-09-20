@@ -287,3 +287,19 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
   .journey-grid .book{min-height:auto;grid-template-rows:22px 200px 72px 58px 48px 48px auto 28px;row-gap:4px}
   .journey-grid .cover-title .main-title{font-size:min(20px,5.2vw)}
 }
+
+/* v16: cover-faithful two-line core titles. THE occupies its own line but does not set the core-title baseline. */
+.journey-grid .cover-title{height:62px;padding-top:18px}
+.journey-grid .cover-title .main-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  white-space:normal;
+  font-size:clamp(18px,1.38vw,22px);
+  line-height:.96;
+  letter-spacing:.01em;
+}
+.journey-grid .cover-title .main-title > span{display:block;white-space:nowrap}
+@media(max-width:900px){.journey-grid .cover-title .main-title{font-size:22px}}
+@media(max-width:580px){.journey-grid .cover-title .main-title{font-size:min(22px,5.8vw)}}
