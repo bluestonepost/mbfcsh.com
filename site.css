@@ -154,3 +154,7 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
  .book-editorial,.editorial-visual{max-width:min(92vw,540px);margin:24px auto 20px}
  .book-editorial img,.editorial-visual img{max-height:360px}
 }
+
+/* Case-study explorer */
+.case-index{max-width:1060px}.case-index>h2{font-size:clamp(32px,4.5vw,48px);color:var(--navy);margin:6px 0}.case-subhead{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:24px;margin:38px 0 16px}.case-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.case-detail{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}.case-detail h4{font-size:18px;line-height:1.2;color:var(--navy);margin:4px 0 12px}.case-detail p{font-size:14px;line-height:1.5;margin:7px 0}.case-chapter{font-size:11px;letter-spacing:.12em;font-weight:900;color:var(--gold)}.case-index-chips{display:flex;flex-wrap:wrap;gap:8px}.case-index-chips span{font-size:12px;font-weight:800;border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:#fff}.challenge-chips span{background:#faf8f3;color:var(--navy)}
+@media(max-width:800px){.case-detail-grid{grid-template-columns:1fr}.case-subhead{margin-top:30px}}
