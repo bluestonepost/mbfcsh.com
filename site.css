@@ -201,3 +201,11 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .series-quote cite{font-style:normal;text-transform:uppercase;letter-spacing:.09em;font-size:11px;font-weight:900;color:var(--gold)}
 @media(max-width:900px){.engage-grid{grid-template-columns:1fr}.quote-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:580px){.quote-grid{grid-template-columns:1fr}.series-quote{min-height:0}}
+
+/* Resource Center: book covers identify the source book; series symbols remain conceptual marks elsewhere. */
+.resource-hero .hero-symbols{max-width:700px;gap:30px;margin-top:34px}
+.resource-hero .hero-symbols img{width:auto;height:210px;max-width:145px;aspect-ratio:auto;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.18))}
+.resource-book-head{grid-template-columns:92px 1fr}
+.resource-book-head img{width:auto;height:128px;max-width:88px;object-fit:contain;filter:drop-shadow(0 7px 8px rgba(0,0,0,.16))}
+@media(max-width:800px){.resource-hero .hero-symbols img{height:180px;max-width:125px}.resource-book-head{grid-template-columns:72px 1fr}.resource-book-head img{height:105px;max-width:70px}}
+@media(max-width:580px){.resource-hero .hero-symbols img{height:165px;max-width:115px}}
