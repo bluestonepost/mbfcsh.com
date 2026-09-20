@@ -400,3 +400,30 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .utility .resources{color:var(--navy)}
 @media(max-width:900px){.booknav{display:none}.utility{margin-left:18px;gap:18px}.utility a{display:none}.utility a[href="resources.html"],.utility a[href="case-studies.html"]{display:inline}.nav .utility a{padding:22px 0 19px}.nav .utility a.active::after{bottom:13px}}
 @media(max-width:580px){.brand{font-size:17px;gap:7px}.brand img{width:26px;height:26px}.utility{gap:14px;margin-left:14px}.nav .utility a{font-size:12px}}
+
+
+/* For Organizations page */
+.org-hero h1{font-size:clamp(44px,6.5vw,74px);max-width:980px;margin-left:auto;margin-right:auto}
+.org-sixcards{max-width:1060px;margin:0 auto;gap:16px}
+.org-sixcards .sixcard{padding:24px;min-height:220px;border-radius:12px}
+.org-sixcards .sixcard strong{font-size:22px;line-height:1.2;margin:6px 0 10px}
+.org-sixcards .sixcard p{margin:0;color:#465164}
+.org-num{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:900;color:var(--gold);margin-bottom:8px}
+.org-four{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:0 auto}
+.org-four a{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;min-height:245px}
+.org-four span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:900;color:var(--gold)}
+.org-four strong{font-size:22px;line-height:1.15;color:var(--navy);margin:12px 0 10px}
+.org-four p{margin:0;color:#465164}
+.org-questions .sixcard{min-height:165px;justify-content:center}
+.org-questions .sixcard strong{font-family:Georgia,serif;font-size:22px;font-weight:400;color:var(--navy);line-height:1.3}
+.org-support{max-width:880px;text-align:center}
+.org-support h2{font-size:clamp(30px,4vw,46px);color:var(--navy);margin:8px 0 12px}
+.org-support p{font-size:18px;color:#465164}
+.org-actions{margin-top:24px}
+.org-author{padding:46px 0}
+.org-author-copy{max-width:760px;margin:0 auto;text-align:center}
+.org-author-copy h2{color:var(--navy);font-size:28px;margin:6px 0 8px}
+.org-author-copy p{color:#566174;margin:0}
+@media(max-width:900px){.org-four{grid-template-columns:1fr 1fr}.utility a[href="about.html"]{display:inline}}
+@media(max-width:700px){.utility a[href="case-studies.html"]{display:none}}
+@media(max-width:580px){.org-four{grid-template-columns:1fr}.org-sixcards .sixcard{min-height:0}.org-questions .sixcard{min-height:0}.utility a[href="about.html"]{display:none}}
