@@ -363,3 +363,17 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .case-count{min-height:20px;margin-top:7px;color:#667085;font-size:14px}
 
 .journey-orientation{max-width:760px;margin:14px auto 0;color:var(--muted);font-size:16px;line-height:1.6}
+
+/* v17 — Increase four-book card formula prominence */
+.journey-grid .book-equation{
+  font-size:13px;
+  line-height:1.18;
+  letter-spacing:.04em;
+}
+.journey-grid .book-equation .equation-outcome{
+  font-size:1em;
+  letter-spacing:.055em;
+}
+@media(max-width:580px){
+  .journey-grid .book-equation{font-size:12px}
+}
