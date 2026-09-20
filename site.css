@@ -442,3 +442,7 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .mobile-nav-panel a.active::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;background:var(--gold);border-radius:3px}
 @media(max-width:900px){.booknav,.utility{display:none!important}.mobile-nav{display:block}.nav{position:relative}.brand{margin-right:auto}}
 @media(max-width:580px){.mobile-nav{margin-left:10px}.mobile-nav summary{font-size:12px;padding:8px 10px}.mobile-nav-panel{top:calc(100% + 7px)}}
+
+/* Fine-tune Book 2 cover optical centering in the four-book series grid. */
+.journey-grid #book2 .journey-cover img{transform:translateX(-12px)}
+@media(max-width:900px){.journey-grid #book2 .journey-cover img{transform:none}}
