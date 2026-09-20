@@ -424,9 +424,9 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .org-author-copy{max-width:760px;margin:0 auto;text-align:center}
 .org-author-copy h2{color:var(--navy);font-size:28px;margin:6px 0 8px}
 .org-author-copy p{color:#566174;margin:0}
-@media(max-width:900px){.org-four{grid-template-columns:1fr 1fr}.utility a[href="about.html"]{display:inline}}
+@media(max-width:900px){.org-four{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.utility a[href="case-studies.html"]{display:none}}
-@media(max-width:580px){.org-four{grid-template-columns:1fr}.org-sixcards .sixcard{min-height:0}.org-questions .sixcard{min-height:0}.utility a[href="about.html"]{display:none}}
+@media(max-width:580px){.org-four{grid-template-columns:1fr}.org-sixcards .sixcard{min-height:0}.org-questions .sixcard{min-height:0}}
 
 
 /* Accessible compact navigation for tablet and phone */
