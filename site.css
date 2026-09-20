@@ -377,3 +377,10 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 @media(max-width:580px){
   .journey-grid .book-equation{font-size:12px}
 }
+
+/* Match homepage Resources cards to Learn / Apply / Engage card geometry */
+#tools .resource-grid{grid-template-columns:repeat(3,1fr);gap:16px;max-width:1060px;margin:0 auto}
+#tools .resource{border-radius:12px;padding:24px;min-height:265px}
+#tools .resource h3{font-size:25px;letter-spacing:0;margin:0 0 10px}
+#tools .resource p{margin:0 0 18px;color:#465164}
+@media(max-width:900px){#tools .resource-grid{grid-template-columns:1fr}}
