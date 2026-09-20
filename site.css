@@ -427,3 +427,18 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 @media(max-width:900px){.org-four{grid-template-columns:1fr 1fr}.utility a[href="about.html"]{display:inline}}
 @media(max-width:700px){.utility a[href="case-studies.html"]{display:none}}
 @media(max-width:580px){.org-four{grid-template-columns:1fr}.org-sixcards .sixcard{min-height:0}.org-questions .sixcard{min-height:0}.utility a[href="about.html"]{display:none}}
+
+
+/* Accessible compact navigation for tablet and phone */
+.mobile-nav{display:none;position:relative;margin-left:18px}
+.mobile-nav summary{list-style:none;cursor:pointer;color:var(--navy);font-size:13px;font-weight:900;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.mobile-nav summary::-webkit-details-marker{display:none}
+.mobile-nav summary::after{content:" +";color:var(--gold)}
+.mobile-nav[open] summary::after{content:" −"}
+.mobile-nav-panel{position:absolute;right:0;top:calc(100% + 9px);width:min(320px,calc(100vw - 26px));display:grid;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 36px rgba(7,31,75,.16);padding:8px;z-index:80}
+.mobile-nav-panel a{display:block;padding:10px 12px;border-radius:7px;color:var(--navy);font-size:13px;font-weight:800;text-decoration:none}
+.mobile-nav-panel a:hover{background:var(--cream)}
+.mobile-nav-panel a.active{background:var(--cream);position:relative}
+.mobile-nav-panel a.active::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;background:var(--gold);border-radius:3px}
+@media(max-width:900px){.booknav,.utility{display:none!important}.mobile-nav{display:block}.nav{position:relative}.brand{margin-right:auto}}
+@media(max-width:580px){.mobile-nav{margin-left:10px}.mobile-nav summary{font-size:12px;padding:8px 10px}.mobile-nav-panel{top:calc(100% + 7px)}}
