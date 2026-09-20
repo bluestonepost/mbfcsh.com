@@ -181,3 +181,23 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .journey-grid .book-equation .formula-sep{color:var(--gold);padding:0 .1em}
 }
 @media(max-width:900px){.journey-grid .book-equation .formula-sep{display:none}}
+
+/* Homepage resource, engagement, and series-quote refinements */
+#tools .resource{display:flex;flex-direction:column;min-height:250px}
+#tools .resource h3{font-size:22px;letter-spacing:.06em;margin-bottom:14px}
+#tools .resource p{margin:0 0 18px;color:#465164}
+#tools .resource a{margin-top:auto}
+.engage-section{background:#f7f8fa}
+.engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1060px;margin:0 auto}
+.engage-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;min-height:265px}
+.engage-number{font-size:12px;letter-spacing:.16em;font-weight:900;color:var(--gold);margin-bottom:12px}
+.engage-card h3{color:var(--navy);font-size:25px;margin:0 0 10px}
+.engage-card p{color:#465164;margin:0 0 18px}
+.engage-card a{margin-top:auto;font-weight:900;color:var(--green);text-decoration:none}
+.series-voices{background:var(--cream)}
+.quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1060px;margin:0 auto}
+.series-quote{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:25px 26px;display:flex;flex-direction:column;justify-content:space-between;min-height:190px}
+.series-quote p{font-family:Georgia,serif;color:var(--navy);font-size:22px;line-height:1.35;margin:0 0 20px}
+.series-quote cite{font-style:normal;text-transform:uppercase;letter-spacing:.09em;font-size:11px;font-weight:900;color:var(--gold)}
+@media(max-width:900px){.engage-grid{grid-template-columns:1fr}.quote-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.quote-grid{grid-template-columns:1fr}.series-quote{min-height:0}}
