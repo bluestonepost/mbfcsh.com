@@ -170,17 +170,19 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .book-equation .formula-sign,.book-equation-display .formula-sign{color:var(--gold);padding:0 .12em}
 .book-equation .formula-causal,.book-equation-display .formula-causal{color:var(--navy)}
 
-/* v13: homepage book-card alignment */
+/* v14: homepage book-card cover alignment */
 @media(min-width:901px){
-.journey-grid .book{grid-template-rows:22px 200px 72px 16px 48px 58px 48px 38px minmax(120px,1fr) 28px;min-height:735px}
-.journey-grid .cover-title{height:58px;justify-content:center}
-.journey-grid .cover-title .main-title{white-space:nowrap;font-size:20px;letter-spacing:.015em}
+.journey-grid .book{grid-template-rows:22px 200px 72px 16px 48px 58px 48px 48px minmax(120px,1fr) 28px;min-height:745px}
+.journey-grid .cover-title{height:58px;position:relative;justify-content:flex-start;padding-top:18px;box-sizing:border-box}
+.journey-grid .cover-title .small-the{position:absolute;top:0;left:0;right:0;margin:0;text-align:center}
+.journey-grid .cover-title .main-title{white-space:nowrap;font-size:20px;line-height:1;letter-spacing:.015em}
 .journey-grid .cover-title.has-the .main-title{font-size:20px}
-.journey-grid .book-equation{flex-direction:row;gap:3px;white-space:nowrap;font-size:9px;letter-spacing:.035em;padding-left:1px;padding-right:1px}
-.journey-grid .book-equation .equation-outcome{font-size:1em;letter-spacing:.04em}
-.journey-grid .book-equation .formula-sep{color:var(--gold);padding:0 .1em}
+.journey-grid .cover-subtitle{height:48px}
+.journey-grid .book-equation{flex-direction:column;gap:3px;white-space:nowrap;font-size:9px;letter-spacing:.045em;padding:7px 1px}
+.journey-grid .book-equation .equation-outcome{font-size:1em;letter-spacing:.06em}
+.journey-grid .book-equation .equation-detail{display:block}
 }
-@media(max-width:900px){.journey-grid .book-equation .formula-sep{display:none}}
+@media(max-width:900px){.journey-grid .book-equation{flex-direction:column}.journey-grid .book-equation .equation-detail{display:block}}
 
 /* Homepage resource, engagement, and series-quote refinements */
 #tools .resource{display:flex;flex-direction:column;min-height:250px}
