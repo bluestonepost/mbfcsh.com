@@ -331,9 +331,21 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 @media(max-width:900px){.series-progression{grid-template-columns:1fr 1fr;gap:16px}.series-arrow{display:none}.series-progression article img{width:64px;height:64px}.series-synthesis p{font-size:21px}}
 @media(max-width:580px){.series-system{padding:56px 0 48px}.series-progression{grid-template-columns:1fr}.series-definition{grid-template-columns:1fr}.series-definition>div:last-child{border-left:0;border-top:1px solid #ddd6c8}.series-synthesis{padding:22px 14px}.series-synthesis p{font-size:19px}}
 
-/* v17 — Series homepage sequence: system → demonstration → language → books */
-.series-language{padding:64px 0;background:#f8f5ee}
-.series-language .section-title{max-width:850px;margin:0 auto 30px;text-align:center}
-.series-language .section-title p{max-width:720px;margin-left:auto;margin-right:auto;font-size:18px}
-.series-language .series-definition{margin-top:28px;background:#fff}
-@media(max-width:580px){.series-language{padding:48px 0}}
+/* Series page — common language / Many Methods section */
+.common-direction{background:#f7f5ef}
+.common-direction-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);gap:54px;align-items:center}
+.common-direction-copy h2{font-size:clamp(32px,4vw,48px);line-height:1.05;color:var(--navy);margin:6px 0 10px}
+.common-direction-lead{font-family:Georgia,serif;font-size:22px;font-style:italic;color:#303b50;margin:0 0 20px}
+.common-direction-copy>p:not(.common-direction-lead):not(.common-direction-close){font-size:17px;line-height:1.65}
+.common-direction-outcomes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.common-direction-outcomes div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.common-direction-outcomes strong,.common-direction-outcomes span{display:block}
+.common-direction-outcomes strong{font-size:16px;text-transform:uppercase;letter-spacing:.045em;margin-bottom:6px}
+.common-direction-outcomes div:first-child strong{color:var(--green)}
+.common-direction-outcomes div:last-child strong{color:var(--red)}
+.common-direction-outcomes span{font-size:14px;line-height:1.45;color:#3d4655}
+.common-direction-close{font-weight:800;color:var(--navy);font-size:18px;line-height:1.4;margin:24px 0 0}
+.common-direction-visual{margin:0;display:flex;justify-content:center;align-items:center}
+.common-direction-visual img{display:block;width:auto;height:auto;max-width:min(100%,520px);max-height:700px;object-fit:contain}
+@media(max-width:900px){.common-direction-grid{grid-template-columns:1fr;gap:30px}.common-direction-visual img{max-width:min(88vw,500px);max-height:none}}
+@media(max-width:580px){.common-direction-outcomes{grid-template-columns:1fr}.common-direction-visual img{max-width:92vw}}
