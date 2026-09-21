@@ -457,7 +457,11 @@ section{padding:66px 0}.section-title{text-align:center;max-width:850px;margin:0
 .journey-grid .book-equation{
   font-family:"Arial Narrow","Aptos Narrow","Roboto Condensed","Helvetica Neue Condensed",Arial,Helvetica,sans-serif;
   font-stretch:condensed;
-  font-size:8px;
   letter-spacing:.02em;
 }
 .journey-grid .book-equation .equation-outcome{letter-spacing:.035em}
+
+/* Fine-tune homepage four-book formulas — slightly smaller than 13px desktop size. */
+@media(min-width:581px){
+  .journey-grid .book-equation{font-size:12px}
+}
